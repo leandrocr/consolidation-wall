@@ -1,0 +1,14 @@
+<form>
+    Consolidation SLOT:<br>
+    <input type="text" name="slot" id="consolidationSlot" style="width:200px; height:200px; font-size: 80"><br>
+    <input type="button" onclick="javascript: callApiGet(); void(0);" value="submit">
+</form>
+
+<script type="text/javascript">
+function callApiGet()
+{
+    document.getElementById('ifr').src="http://172.20.170.111:4444/consolidation-wall/slot/" + document.getElementById("consolidationSlot").value;
+}
+</script>
+
+<iframe id="ifr"></iframe>
