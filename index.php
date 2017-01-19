@@ -8,17 +8,18 @@ $app = new Silex\Application();
 
 $app->get('/consolidation-wall/slot/{slot}', function ($slot) use ($app) {
     $matrixConsolidation = [
-        'A3' => 13,
-        'A2' => 12,
-        'A1' => 11,
-        'B3' => 10,
-        'B2' => 9,
-        'B1' => 8
+        // 'A3' => 13,
+        // 'A2' => 12,
+        // 'A1' => 11,
+        // 'B3' => 10,
+        'A2' => 9,
+        'A1' => 8
     ];
 
     $serial = new PhpSerial;
 
-    $serial->deviceSet("/dev/cu.usbmodem1421");
+    // $serial->deviceSet("/dev/cu.usbmodem1421");
+    $serial->deviceSet("/dev/cu.usbmodem1411");
     $serial->confBaudRate(9600);
 
     $serial->deviceOpen();
